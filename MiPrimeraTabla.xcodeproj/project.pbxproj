@@ -60,10 +60,8 @@
 		7D266A861F79E3C6000DC5FF /* MiPrimeraTabla */ = {
 			isa = PBXGroup;
 			children = (
-				7D266A871F79E3C6000DC5FF /* AppDelegate.h */,
-				7D266A881F79E3C6000DC5FF /* AppDelegate.m */,
-				7D266A8A1F79E3C6000DC5FF /* ViewController.h */,
-				7D266A8B1F79E3C6000DC5FF /* ViewController.m */,
+				7D266AA11F79E429000DC5FF /* Main */,
+				7D266AA01F79E3F5000DC5FF /* Controllers */,
 				7D266A8D1F79E3C6000DC5FF /* Main.storyboard */,
 				7D266A931F79E3C6000DC5FF /* Assets.xcassets */,
 				7D266A951F79E3C6000DC5FF /* LaunchScreen.storyboard */,
@@ -72,6 +70,24 @@
 				7D266A901F79E3C6000DC5FF /* MiPrimeraTabla.xcdatamodeld */,
 			);
 			path = MiPrimeraTabla;
+			sourceTree = "<group>";
+		};
+		7D266AA01F79E3F5000DC5FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D266A8A1F79E3C6000DC5FF /* ViewController.h */,
+				7D266A8B1F79E3C6000DC5FF /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7D266AA11F79E429000DC5FF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7D266A871F79E3C6000DC5FF /* AppDelegate.h */,
+				7D266A881F79E3C6000DC5FF /* AppDelegate.m */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
