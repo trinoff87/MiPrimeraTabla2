@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0BDF691F7B143000D74FF0 /* CellMainTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BDF671F7B143000D74FF0 /* CellMainTable.m */; };
+		7D0BDF6A1F7B143000D74FF0 /* CellMainTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D0BDF681F7B143000D74FF0 /* CellMainTable.xib */; };
+		7D0BDF6D1F7B1CF900D74FF0 /* tyrion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D0BDF6C1F7B1CF900D74FF0 /* tyrion.jpg */; };
 		7D266A891F79E3C6000DC5FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D266A881F79E3C6000DC5FF /* AppDelegate.m */; };
 		7D266A8C1F79E3C6000DC5FF /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D266A8B1F79E3C6000DC5FF /* Home.m */; };
 		7D266A8F1F79E3C6000DC5FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D266A8D1F79E3C6000DC5FF /* Main.storyboard */; };
@@ -17,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D0BDF661F7B143000D74FF0 /* CellMainTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellMainTable.h; sourceTree = "<group>"; };
+		7D0BDF671F7B143000D74FF0 /* CellMainTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellMainTable.m; sourceTree = "<group>"; };
+		7D0BDF681F7B143000D74FF0 /* CellMainTable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellMainTable.xib; sourceTree = "<group>"; };
+		7D0BDF6C1F7B1CF900D74FF0 /* tyrion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tyrion.jpg; sourceTree = "<group>"; };
 		7D266A841F79E3C6000DC5FF /* MiPrimeraTabla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiPrimeraTabla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D266A871F79E3C6000DC5FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D266A881F79E3C6000DC5FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,6 +48,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D0BDF651F7B131100D74FF0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7D0BDF661F7B143000D74FF0 /* CellMainTable.h */,
+				7D0BDF671F7B143000D74FF0 /* CellMainTable.m */,
+				7D0BDF681F7B143000D74FF0 /* CellMainTable.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7D0BDF6B1F7B1CF900D74FF0 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				7D0BDF6C1F7B1CF900D74FF0 /* tyrion.jpg */,
+			);
+			path = imgs;
+			sourceTree = "<group>";
+		};
 		7D266A7B1F79E3C6000DC5FF = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +85,10 @@
 		7D266A861F79E3C6000DC5FF /* MiPrimeraTabla */ = {
 			isa = PBXGroup;
 			children = (
+				7D0BDF6B1F7B1CF900D74FF0 /* imgs */,
 				7D266AA11F79E429000DC5FF /* Main */,
 				7D266AA01F79E3F5000DC5FF /* Controllers */,
+				7D0BDF651F7B131100D74FF0 /* Cells */,
 				7D266A8D1F79E3C6000DC5FF /* Main.storyboard */,
 				7D266A931F79E3C6000DC5FF /* Assets.xcassets */,
 				7D266A951F79E3C6000DC5FF /* LaunchScreen.storyboard */,
@@ -149,8 +176,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D266A971F79E3C6000DC5FF /* LaunchScreen.storyboard in Resources */,
+				7D0BDF6D1F7B1CF900D74FF0 /* tyrion.jpg in Resources */,
 				7D266A941F79E3C6000DC5FF /* Assets.xcassets in Resources */,
 				7D266A8F1F79E3C6000DC5FF /* Main.storyboard in Resources */,
+				7D0BDF6A1F7B143000D74FF0 /* CellMainTable.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +194,7 @@
 				7D266A891F79E3C6000DC5FF /* AppDelegate.m in Sources */,
 				7D266A9A1F79E3C6000DC5FF /* main.m in Sources */,
 				7D266A921F79E3C6000DC5FF /* MiPrimeraTabla.xcdatamodeld in Sources */,
+				7D0BDF691F7B143000D74FF0 /* CellMainTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
