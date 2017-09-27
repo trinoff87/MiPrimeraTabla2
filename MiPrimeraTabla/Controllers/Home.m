@@ -123,6 +123,12 @@
         self.age = [[self.alertController textFields][1] text];
         NSLog(@"Nombre %@", [[self.alertController textFields][0] text]);
         NSLog(@"Edad %@", [[self.alertController textFields][1] text]);
+        [self handleImageGallery];
+        [self.userImages addObject:@"/Users/trinof/Documents/MiPrimeraTabla/MiPrimeraTabla/imgs/myfile.jpg"];
+        [self.userNames addObject:self.name];
+        [self.userAges addObject:self.age];
+        [self.userDesc addObject:[NSString stringWithFormat:@"%@ is a new game of thrones character and is %@ years old", self.name, self.age]];
+        [self.tblMain reloadData];
         //compare the current password and do action here
         
     }];
@@ -152,13 +158,8 @@
     [self.imageView setImage:img];
     NSData * binaryImageData = UIImagePNGRepresentation(img);
     [binaryImageData writeToFile:[@"/Users/trinof/Documents/MiPrimeraTabla/MiPrimeraTabla/imgs" stringByAppendingPathComponent:@"myfile.jpg"] atomically:YES];
-    //[self.userNames addObject:self.name];
-    //[self.userAges addObject:self.age];
-    //[self.userImages addObject:@"myfile.jpg"];
-    //[self.tblMain reloadData];
-    [self.imagePicker dismissViewControllerAnimated:YES completion:nil];
-    //[self presentViewController:self.alertController animated:YES completion:nil];
-    
+    [self.tblMain reloadData];
+    [self.imagePicker dismissViewControllerAnimated:YES completion:nil];    
 }
 
 @end
