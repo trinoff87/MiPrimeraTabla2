@@ -14,6 +14,7 @@
 @property NSMutableArray *userNames;
 @property NSMutableArray *userAges;
 @property NSMutableArray *userImages;
+@property NSMutableArray *userDesc;
 @property NSString *name;
 @property NSString *age;
 @property NSString *selectedAge;
@@ -44,6 +45,8 @@
     self.userAges  = [[NSMutableArray alloc] initWithObjects: @"38 años", @"22 años", @"25 años", @"16 años", @"42 años", nil];
     
     self.userImages = [[NSMutableArray alloc] initWithObjects: @"tyrion.jpg", @"daenerys.jpg", @"jon.jpg", @"arya.jpg", @"cersei.jpg", nil];
+    
+    self.userDesc  = [[NSMutableArray alloc] initWithObjects: @"Hijo de Tywin Lannister, la mano de Daenerys Targaryen", @"La heredera al trono, la unica Targaryen sobreviviente", @"El rey del norte, bastardo de Ned Stark", @"La hija menor de los stark, se convirtio en una asesina.", @"La reina de los 7 reinos, hija de Tywin Lannister", nil];
 }
 
 /**********************************************************************************************/
@@ -78,7 +81,7 @@
 }
 //-------------------------------------------------------------------------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.selectedAge = self.userAges[indexPath.row];
+    self.selectedAge = self.userDesc[indexPath.row];
     self.selectedImg =  self.userImages[indexPath.row];
     [self performSegueWithIdentifier:@"segueID" sender:self];
 }

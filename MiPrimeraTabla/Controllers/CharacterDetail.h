@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CharacterDetail : UIViewController
+- (IBAction)btnBackPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *lblAge;
 @property (nonatomic, strong) NSString * age;
 @property (weak, nonatomic) IBOutlet UIImageView *imgUser;
