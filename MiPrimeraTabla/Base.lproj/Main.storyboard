@@ -62,11 +62,43 @@
                     </view>
                     <connections>
                         <outlet property="tblMain" destination="ROv-dg-hMD" id="ada-JH-sg2"/>
+                        <segue destination="evT-xj-4Pi" kind="modal" identifier="segueID" id="uLI-sb-3FE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.5" y="130.5"/>
+        </scene>
+        <!--Character Detail-->
+        <scene sceneID="RgZ-5F-TVj">
+            <objects>
+                <viewController id="evT-xj-4Pi" customClass="CharacterDetail" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kQf-Je-iys">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="tVO-nL-B6U">
+                                <rect key="frame" x="67" y="31" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lH3-2f-am2">
+                                <rect key="frame" x="27" y="214" width="320" height="235"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgUser" destination="tVO-nL-B6U" id="8RB-jx-SFH"/>
+                        <outlet property="lblAge" destination="lH3-2f-am2" id="6RF-3J-nPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQn-Yr-A08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537.5" y="120.5"/>
         </scene>
     </scenes>
 </document>

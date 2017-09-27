@@ -8,6 +8,7 @@
 
 #import "Home.h"
 #import "CellMainTable.h"
+#import "CharacterDetail.h"
 
 @interface Home ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property NSMutableArray *userNames;
@@ -15,6 +16,8 @@
 @property NSMutableArray *userImages;
 @property NSString *name;
 @property NSString *age;
+@property NSString *selectedAge;
+@property NSString * selectedImg;
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) UIAlertController *alertController;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -75,7 +78,16 @@
 }
 //-------------------------------------------------------------------------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //Pending
+    self.selectedAge = self.userAges[indexPath.row];
+    self.selectedImg =  self.userImages[indexPath.row];
+    [self performSegueWithIdentifier:@"segueID" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    CharacterDetail *detailController = segue.destinationViewController;
+    detailController.age = self.selectedAge;
+    detailController.image = self.selectedImg;
 }
 /**********************************************************************************************/
 #pragma mark - Action methods

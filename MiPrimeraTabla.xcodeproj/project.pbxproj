@@ -14,6 +14,7 @@
 		7D0BDF731F7B2F4E00D74FF0 /* jon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D0BDF6F1F7B2F4D00D74FF0 /* jon.jpg */; };
 		7D0BDF741F7B2F4E00D74FF0 /* daenerys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D0BDF701F7B2F4E00D74FF0 /* daenerys.jpg */; };
 		7D0BDF751F7B2F4E00D74FF0 /* cersei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D0BDF711F7B2F4E00D74FF0 /* cersei.jpg */; };
+		7D0BDF791F7BE5C000D74FF0 /* CharacterDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0BDF781F7BE5B900D74FF0 /* CharacterDetail.m */; };
 		7D266A891F79E3C6000DC5FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D266A881F79E3C6000DC5FF /* AppDelegate.m */; };
 		7D266A8C1F79E3C6000DC5FF /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D266A8B1F79E3C6000DC5FF /* Home.m */; };
 		7D266A8F1F79E3C6000DC5FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D266A8D1F79E3C6000DC5FF /* Main.storyboard */; };
@@ -32,6 +33,8 @@
 		7D0BDF6F1F7B2F4D00D74FF0 /* jon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jon.jpg; sourceTree = "<group>"; };
 		7D0BDF701F7B2F4E00D74FF0 /* daenerys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = daenerys.jpg; sourceTree = "<group>"; };
 		7D0BDF711F7B2F4E00D74FF0 /* cersei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cersei.jpg; sourceTree = "<group>"; };
+		7D0BDF771F7BE5B900D74FF0 /* CharacterDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharacterDetail.h; sourceTree = "<group>"; };
+		7D0BDF781F7BE5B900D74FF0 /* CharacterDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterDetail.m; sourceTree = "<group>"; };
 		7D266A841F79E3C6000DC5FF /* MiPrimeraTabla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiPrimeraTabla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D266A871F79E3C6000DC5FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D266A881F79E3C6000DC5FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 		7D266AA01F79E3F5000DC5FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7D0BDF771F7BE5B900D74FF0 /* CharacterDetail.h */,
+				7D0BDF781F7BE5B900D74FF0 /* CharacterDetail.m */,
 				7D266A8A1F79E3C6000DC5FF /* Home.h */,
 				7D266A8B1F79E3C6000DC5FF /* Home.m */,
 			);
@@ -208,6 +213,7 @@
 			files = (
 				7D266A8C1F79E3C6000DC5FF /* Home.m in Sources */,
 				7D266A891F79E3C6000DC5FF /* AppDelegate.m in Sources */,
+				7D0BDF791F7BE5C000D74FF0 /* CharacterDetail.m in Sources */,
 				7D266A9A1F79E3C6000DC5FF /* main.m in Sources */,
 				7D266A921F79E3C6000DC5FF /* MiPrimeraTabla.xcdatamodeld in Sources */,
 				7D0BDF691F7B143000D74FF0 /* CellMainTable.m in Sources */,
