@@ -9,10 +9,15 @@
 #import "Home.h"
 #import "CellMainTable.h"
 
-@interface Home ()
+@interface Home ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property NSMutableArray *userNames;
 @property NSMutableArray *userAges;
 @property NSMutableArray *userImages;
+@property NSString *name;
+@property NSString *age;
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
+@property (strong, nonatomic) UIAlertController *alertController;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
 @implementation Home
@@ -76,10 +81,69 @@
 #pragma mark - Action methods
 /**********************************************************************************************/
 - (IBAction)btnAddPressed:(id)sender {
-    [self.userNames addObject:@"Walter"];
+    /*[self.userNames addObject:@"Walter"];
     [self.userAges addObject:@"37 años"];
     [self.userImages addObject:@"jon.jpg"];
-    [self.tblMain reloadData];
+    [self.tblMain reloadData];*/
+    self.alertController = [UIAlertController alertControllerWithTitle:@"" message:@"Agregar nuevo personaje" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self.alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"Nombre";
+        //textField.secureTextEntry = YES;
+    }];
+    [self.alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"Edad";
+        //textField.secureTextEntry = YES;
+    }];
+    
+    UIAlertAction *imageGallery = [UIAlertAction actionWithTitle:@"Elige foto..."
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction *action)
+                                   {
+                                       [self handleImageGallery];
+                                   }];
+    [self.alertController addAction:imageGallery];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Agregar" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.name = [[self.alertController textFields][0] text];
+        self.age = [[self.alertController textFields][1] text];
+        NSLog(@"Nombre %@", [[self.alertController textFields][0] text]);
+        NSLog(@"Edad %@", [[self.alertController textFields][1] text]);
+        //compare the current password and do action here
+        
+    }];
+    
+    [self.alertController addAction:confirmAction];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancelar" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"Canelled");
+    }];
+    
+    [self.alertController addAction:cancelAction];
+    [self presentViewController:self.alertController animated:YES completion:nil];
+}
+
+- (void)handleImageGallery
+{
+    self.imagePicker = [[UIImagePickerController alloc] init];
+    self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    self.imagePicker.delegate = self;
+    [self presentViewController:self.imagePicker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSLog(@"image picked!");
+    NSData *dataImage = UIImageJPEGRepresentation([info objectForKey:@"UIImagePickerControllerOriginalImage"],1);
+    UIImage *img = [[UIImage alloc] initWithData:dataImage];
+    [self.imageView setImage:img];
+    NSData * binaryImageData = UIImagePNGRepresentation(img);
+    [binaryImageData writeToFile:[@"/Users/trinof/Documents/MiPrimeraTabla/MiPrimeraTabla/imgs" stringByAppendingPathComponent:@"myfile.jpg"] atomically:YES];
+    //[self.userNames addObject:self.name];
+    //[self.userAges addObject:self.age];
+    //[self.userImages addObject:@"myfile.jpg"];
+    //[self.tblMain reloadData];
+    [self.imagePicker dismissViewControllerAnimated:YES completion:nil];
+    //[self presentViewController:self.alertController animated:YES completion:nil];
+    
 }
 
 @end
